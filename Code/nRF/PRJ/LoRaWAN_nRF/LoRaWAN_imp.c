@@ -237,7 +237,7 @@ static uint32_t GetJoinInterval(void)
 	}
 	else
 	{
-		interval_min = 24;	// 1 day interval. 1910 minutes have passed 
+		interval_min = 1440;	// 1 day interval. 1910 minutes have passed 
 	}
 
 	return (interval_min * 60 * 1000); // Multiply by 60 and 1000 in order to calculate the interval in ms.
