@@ -978,6 +978,10 @@ static void MlmeConfirm( MlmeConfirm_t *mlmeConfirm )
                 MibRequestConfirm_t mibGet;
                 NRF_LOG_INFO( "###### ===== OTAA JOINED ==== ######" );
 
+                // reset join counter
+                app_join_counter = 0; 
+                NRF_LOG_INFO( "###### ===== app_join_counter reset ==== ######" );
+
                 mibGet.Type = MIB_DEV_ADDR;
                 status = LoRaMacMibGetRequestConfirm( &mibGet );
                 if(status == LORAMAC_STATUS_OK)
